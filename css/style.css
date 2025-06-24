@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ccc;
+  border-radius: 10px;
+  height: 5px;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: tomato;
+  border-radius: inherit;
+  height: inherit;
+  width: 30%;
+}
+
+.cover {
+  border-radius: 50%;
+  animation: cover 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.container.play .cover {
+  animation-play-state: running;
+}
+
+@keyframes cover {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
