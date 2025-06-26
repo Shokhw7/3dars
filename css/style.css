@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +14,17 @@
   border-radius: 10px;
   height: 5px;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-and-time{
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress {
@@ -40,4 +52,64 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.extra-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.extra-controls button {
+  padding: 5px 10px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volume-slider {
+  transform: rotate(-90deg);
+  width: 150px;
+  /* margin-right: 1px; */
+}
+.vol{
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: 570px;
+  position: absolute;
+}
+
+button {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background-color: #0072ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+button i {
+  font-size: 16px;
+}
+#download{
+  position: absolute;
+  left: 500px;
 }

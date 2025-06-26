@@ -15,30 +15,58 @@
   </head>
   <body>
     <div class="container">
+      
       <img
+        id="cover"
         class="cover"
         src="./images/Weeknd - Blinding Lights.png"
         alt=""
         width="200"
       />
-    <h2>Volume: <span id="volume"></span></h2>
-<input
+    <h3 class="vol">
+    <input class="volume-slider"
     id="volume-change"       
     type="range"
     value="1"               
     min="0"                  
     max="100"                
-    step="1"                 
- />
+    step="1"
+    />
+ <span id="volume"></span>
+</h3>
+
+  <div class="song-title-area">
+    <h3 id="music-title">Weeknd - Blinding Lights</h3>
+  </div>
       <audio src="./audios/Weeknd - Blinding Lights.mp3"></audio>
-      <div class="progress-container">
-        <div class="progress"></div>
+     
+        <div class="progress-and-time">
+          <span id="current-time">00:00</span>
+          <div class="progress-container">
+          <div style="width: 0;" class="progress"></div>
       </div>
-      <div>
+          <span id="duration">00:00</span>
+          <a id="download" href="./audios/Weeknd - Blinding Lights.mp3" download>
+          <button id="download-btn" title="Download"><i class="fa-solid fa-download"></i></button>
+          </a>
+      </div>
+      <div class="all-fa">
+        <button id="loop-btn"><i class="fa-solid fa-repeat"></i></button>
+        <button id="back-10"><i class="fa-solid fa-backward"></i> 10s</button>
         <button id="backward"><i class="fa-solid fa-backward-step"></i></button>
         <button id="play"><i class="fa-solid fa-play"></i></button>
         <button id="forward"><i class="fa-solid fa-forward-step"></i></button>
+        <button id="forward-10"><i class="fa-solid fa-forward"></i> 10s</button>
+        <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
       </div>
+      <div class="extra-controls">
+  <button id="mute-btn"><i class="fa-solid fa-volume-xmark"></i> Mute</button>
+  <button onclick="speedRate(0.5)">0.5x</button>
+  <button onclick="speedRate(1)">1x</button>
+  <button onclick="speedRate(1.5)">1.5x</button>
+  <button onclick="speedRate(2)">2x</button>
+</div>
+
     </div>
     <script src="./js/app.js"></script>
   </body>
