@@ -6,10 +6,13 @@
   align-items: center;
   gap: 20px;
 }
-
+html{
+  font-size: 62.5%;
+}
 .progress-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 40rem;
+  /* max-width: 400px; */
   background-color: #ccc;
   border-radius: 10px;
   height: 5px;
@@ -21,7 +24,7 @@
 .progress-and-time{
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 46rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +64,7 @@
   justify-content: center;
 }
 .extra-controls button {
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border: none;
   background: #333;
   color: white;
@@ -71,13 +74,13 @@
 
 .volume-slider {
   transform: rotate(-90deg);
-  width: 150px;
+  width: 15rem;
   /* margin-right: 1px; */
 }
 .vol{
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 7rem;
   align-items: center;
   margin-bottom: 50px;
   margin-left: 570px;
@@ -88,7 +91,7 @@ button {
   background-color: #f4f4f4;
   border: none;
   border-radius: 12px;
-  padding: 10px 14px;
+  padding: 0.625rem 0.875rem;
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -111,5 +114,47 @@ button i {
 }
 #download{
   position: absolute;
-  left: 500px;
+  left: 50rem;
 }
+#music-title{
+  font-size: 1rem;
+}
+img{
+  max-width: 20rem;
+}
+@media (max-width: 465px) {
+  button{
+    padding: 0.6rem;
+  }
+  #music-title{
+    font-size: 1.2rem;
+  }
+  .extra-controls{
+    gap:0;
+  }
+  .extra-controls button{
+    padding: 0.25rem 0.35rem;
+  }
+  .progress-container{
+    max-width: 29rem;
+  }
+  img{
+    max-width: 15rem;
+  }
+  .volume-slider{
+    width: 9rem;
+  }
+  .vol{
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+    gap: 4rem;
+  }
+  #download{
+    left: 36.5rem;
+    position: absolute;
+  }
+  .progress-and-time{
+    max-width: 35rem;
+  }
+}
+
